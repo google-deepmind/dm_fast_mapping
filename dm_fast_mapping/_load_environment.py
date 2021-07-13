@@ -68,6 +68,13 @@ FAST_MAPPING_TASK_LEVEL_NAMES = frozenset((
     'num_generalization/fast_map_eight_objs',
     'num_generalization/fast_map_five_objs',
     'num_generalization/fast_map_three_objs',
+    'with_distractors/eval_fast_map_three_episodes_three_objs_five_distractor',
+    'with_distractors/eval_fast_map_four_episodes_three_objs_one_distractor',
+    'with_distractors/eval_fast_map_three_objs_ten_distractor',
+    'with_distractors/eval_fast_map_three_objs_twenty_distractor',
+    'with_distractors/fast_map_three_objs_no_distractor',
+    'with_distractors/fast_map_three_objs_one_distractor',
+    'with_distractors/fast_map_three_objs_two_distractor',
 ))
 
 _ConnectionDetails = collections.namedtuple('_ConnectionDetails',
@@ -282,6 +289,10 @@ def _validate_environment_settings(settings):
     raise ValueError('num_action_repeats must have a positive value.')
   if settings.width <= 0 or settings.height <= 0:
     raise ValueError('width and height must have a positive value.')
+  if ('with_distractors/' in settings.level_name and
+      settings.episode_length_seconds != 450.0):
+    raise ValueError(
+        'episode_length_seconds must be 450.0 for with_distractors/ levels.')
 
 
 def load_from_disk(path, settings):

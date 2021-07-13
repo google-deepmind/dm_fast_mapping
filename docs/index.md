@@ -22,8 +22,15 @@ The available values for `level_name` are as follows:
 *   'fast_slow/two_phase_slow_learn_three_objs_bed_tray_putting_near'
 *   'fast_slow/two_phase_slow_learn_three_objs_bed_tray_putting_on'
 *   'fast_slow/test_holdout_fast_map_three_objs_bed_tray_putting_on'
+*   'with_distractors/eval_fast_map_three_episodes_three_objs_five_distractor',
+*   'with_distractors/eval_fast_map_four_episodes_three_objs_one_distractor',
+*   'with_distractors/eval_fast_map_three_objs_ten_distractor',
+*   'with_distractors/eval_fast_map_three_objs_twenty_distractor',
+*   'with_distractors/fast_map_three_objs_no_distractor',
+*   'with_distractors/fast_map_three_objs_one_distractor',
+*   'with_distractors/fast_map_three_objs_two_distractor',
 
-# Experiments
+# Experiments from "Grounded Language Learning: Fast and Slow"
 
 These tasks correspond different experiments:
 
@@ -60,6 +67,31 @@ The sections refer to the version of the paper hosted on arXiv on 1 November
 2020 ([arxiv](https://arxiv.org/pdf/2009.01719.pdf)). Note that we do not
 release the experiments involving ShapeNet assets (Figure 4, Section 4.1) for
 copyright reasons.
+
+# Experiments from "Towards mental time travel: a hierarchical memory for RL..."
+
+The tasks prefixed with `with_distractors` are the rapid-word-learning tasks
+from Figure 5, Section 3.3:
+
+1.  Length generalization (Fig. 5c):
+
+    *   Train on 'with_distractors/fast_map_three_objs_no_distractor'
+        'with_distractors/fast_map_three_objs_one_distractor'
+        'with_distractors/fast_map_three_objs_two_distractor'
+    *   Test on 'with_distractors/eval_fast_map_three_objs_twenty_distractor'
+
+2.  Generalization to multi-episode evaluation (Fig. 5d-e) with:
+
+    *   Train on same as previous:
+        'with_distractors/fast_map_three_objs_no_distractor'
+        'with_distractors/fast_map_three_objs_one_distractor'
+        'with_distractors/fast_map_three_objs_two_distractor'
+    *   Test on
+        'with_distractors/eval_fast_map_four_episodes_three_objs_one_distractor'
+        'with_distractors/eval_fast_map_three_episodes_three_objs_five_distractor'
+
+The section and figure numbers refer to the paper version
+([arXiv](https://arxiv.org/abs/2105.14039)) that was posted on 28th May, 2021.
 
 # Actions
 

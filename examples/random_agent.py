@@ -29,7 +29,7 @@ flags.DEFINE_string(
     'If None, uses the default dm_fast_mapping name')
 
 flags.DEFINE_integer('seed', 123, 'Environment seed.')
-flags.DEFINE_string('level_name', 'spot_diff_extrapolate',
+flags.DEFINE_string('level_name', 'fast_slow/fast_map_three_objs',
                     'Name of task to run.')
 
 
@@ -52,8 +52,14 @@ class RandomAgent(object):
 
 
 def main(_):
+  if 'with_distractors' in FLAGS.level_name:  # for the tasks from the HTM paper
+    episode_length_seconds = 450.0
+  else:
+    episode_length_seconds = 120.0
+
   env_settings = dm_fast_mapping.EnvironmentSettings(
-      seed=FLAGS.seed, level_name=FLAGS.level_name)
+      seed=FLAGS.seed, level_name=FLAGS.level_name,
+      episode_length_seconds=episode_length_seconds)
   with dm_fast_mapping.load_from_docker(
       name=FLAGS.docker_image_name, settings=env_settings) as env:
     agent = RandomAgent(env.action_spec())

@@ -84,6 +84,23 @@ If you use `dm_fast_mapping` in your work, please cite the accompanying paper:
 }
 ```
 
+For the `with_distractors` tasks, please also cite the source for those tasks:
+
+```bibtex
+@misc{lampinen2021towards,
+      title={Towards mental time travel:
+             a hierarchical memory for reinforcement learning agents},
+      author={Lampinen, Andrew Kyle and
+              Chan, Stephanie C Y and
+              Banino, Andrea and
+              Hill, Felix},
+      archivePrefix={arXiv},
+      eprint={2105.14039},
+      year={2021},
+      primaryClass={cs.LG}
+}
+```
+
 ## Notice
 
 This is not an officially supported Google product.
