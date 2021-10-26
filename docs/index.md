@@ -22,7 +22,9 @@ The available values for `level_name` are as follows:
 *   'fast_slow/two_phase_slow_learn_three_objs_bed_tray_putting_near'
 *   'fast_slow/two_phase_slow_learn_three_objs_bed_tray_putting_on'
 *   'fast_slow/test_holdout_fast_map_three_objs_bed_tray_putting_on'
+*   'with_distractors/eval_fast_map_two_episodes_three_objs_five_distractor',
 *   'with_distractors/eval_fast_map_three_episodes_three_objs_five_distractor',
+*   'with_distractors/eval_fast_map_four_episodes_three_objs_no_distractor',
 *   'with_distractors/eval_fast_map_four_episodes_three_objs_one_distractor',
 *   'with_distractors/eval_fast_map_three_objs_ten_distractor',
 *   'with_distractors/eval_fast_map_three_objs_twenty_distractor',
@@ -73,25 +75,25 @@ copyright reasons.
 The tasks prefixed with `with_distractors` are the rapid-word-learning tasks
 from Figure 5, Section 3.3:
 
-1.  Length generalization (Fig. 5c):
+1.  Length generalization (Fig. 5d):
 
     *   Train on 'with_distractors/fast_map_three_objs_no_distractor'
         'with_distractors/fast_map_three_objs_one_distractor'
         'with_distractors/fast_map_three_objs_two_distractor'
-    *   Test on 'with_distractors/eval_fast_map_three_objs_twenty_distractor'
+    *   Test on 'with_distractors/eval_fast_map_three_objs_ten_distractor'
 
-2.  Generalization to multi-episode evaluation (Fig. 5d-e) with:
+2.  Generalization to multi-episode evaluation (Fig. 5e-f) with:
 
     *   Train on same as previous:
         'with_distractors/fast_map_three_objs_no_distractor'
         'with_distractors/fast_map_three_objs_one_distractor'
         'with_distractors/fast_map_three_objs_two_distractor'
     *   Test on
-        'with_distractors/eval_fast_map_four_episodes_three_objs_one_distractor'
-        'with_distractors/eval_fast_map_three_episodes_three_objs_five_distractor'
+        'with_distractors/eval_fast_map_four_episodes_three_objs_no_distractor'
+        'with_distractors/eval_fast_map_two_episodes_three_objs_five_distractor'
 
-The section and figure numbers refer to the paper version
-([arXiv](https://arxiv.org/abs/2105.14039)) that was posted on 28th May, 2021.
+The section and figure numbers refer to the updated paper version
+([arXiv](https://arxiv.org/abs/2105.14039)) that was posted in October, 2021.
 
 # Actions
 
